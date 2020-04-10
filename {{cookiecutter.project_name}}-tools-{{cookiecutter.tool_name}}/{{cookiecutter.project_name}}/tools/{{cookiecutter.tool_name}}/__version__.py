@@ -17,7 +17,7 @@ __version__ = None
 
 
 def get_version():
-    from {{cookiecutter.project.name}}.tools.{{cookiecutter.tool_name}}._version import get_versions
+    from {{cookiecutter.project_name}}.tools.{{cookiecutter.tool_name}}._version import get_versions
 
     global __version__
     if __version__:
