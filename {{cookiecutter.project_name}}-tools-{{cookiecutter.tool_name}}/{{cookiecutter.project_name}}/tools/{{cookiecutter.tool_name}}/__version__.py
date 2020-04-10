@@ -13,11 +13,16 @@ __maintainer__ = "{{cookiecutter.maintainer}}"
 __email__ = "{{cookiecutter.email}}"
 __version__ = None
 
+__version__ = None
+
 
 def get_version():
-    from {{project.name}}.tools.{{tool_name}}._version import get_versions
+    from {{cookiecutter.project.name}}.tools.{{cookiecutter.tool_name}}._version import get_versions
 
     global __version__
+    if __version__:
+        return __version__
+    
     __version__ = get_versions()['version']
     del get_versions
 
