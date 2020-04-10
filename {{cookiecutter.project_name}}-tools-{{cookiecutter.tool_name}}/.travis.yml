@@ -1,0 +1,30 @@
+language: python
+before_install:
+- pip install pycodestyle
+install:
+- pip install -r requirements.txt
+- python setup.py install
+script:
+- find . -name \*.py -exec pycodestyle --max-line-length=120 --ignore=E402 {} +
+- pytest --cov={{cookiecutter.project_name}}
+- sphinx-apidoc -f -e -o docs/sphinx {{cookiecutter.project_name}}
+- sphinx-build -M html ./docs/sphinx ./
+after_success:
+- coveralls
+- cd html && touch .nojekyll && cd ../
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: "$GITHUB_TOKEN"
+    keep_history: true
+    local_dir: html
+    on:
+      branch: master
+  - provider: pypi
+    skip_cleanup: true
+    user: tpoveda
+    password:
+      secure: PLEASE_REPLACE_ME
+    on:
+      branch: master
+      tags: true

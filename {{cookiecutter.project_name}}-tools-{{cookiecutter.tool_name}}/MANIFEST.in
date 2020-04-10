@@ -1,0 +1,5 @@
+include {{cookiecutter.project_name}}/tools/{{cookiecutter.tool_name}}/__logging__.ini
+include {{cookiecutter.project_name}}/tools/{{cookiecutter.tool_name}}/resources/icons/*.*
+include {{cookiecutter.project_name}}/tools/{{cookiecutter.tool_name}}/resources/images/*.*
+include {{cookiecutter.project_name}}/tools/{{cookiecutter.tool_name}}/_version.py
+include versioneer.py

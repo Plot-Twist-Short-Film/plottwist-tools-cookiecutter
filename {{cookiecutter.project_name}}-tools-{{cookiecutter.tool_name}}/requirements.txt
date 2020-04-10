@@ -1,0 +1,4 @@
+# ===================================================================
+# {{cookiecutter.project_name}}-tools-{{cookiecutter.tool_name}} requirements file
+# ===================================================================
+{{cookiecutter.project_name}}

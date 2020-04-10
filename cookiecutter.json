@@ -1,0 +1,17 @@
+{
+    "project_name": "plottwist",
+    "project_name_alt": "plot-twist",
+    "tool_name": "tool",
+    "tool_nice_name": "My Tool",
+    "tool_description": "Tool Description",
+    "tool_tag": "tool",
+    "tool_class": "MyTool",
+    "author": "Tomas Poveda",
+    "maintainer": "Tomas Poveda",
+    "email": "tpovedatd@gmail.com",
+    "year": "{% now 'utc', '%Y' %}",
+    "version": "0.0.1",
+    "sentry_id": "",
+    "kitsu_login": "False",
+    "department": "TD"
+}
